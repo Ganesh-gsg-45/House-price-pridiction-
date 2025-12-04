@@ -35,6 +35,12 @@ class PredictPipeline:
                 # Rebuild preprocessor object using the same transformation logic
                 data_transformer = DataTransformation()
                 preprocessor = data_transformer.get_data_transformation_object()
+                # Fit the rebuilt preprocessor on the incoming features so it's ready to transform.
+                try:
+                    preprocessor.fit(features)
+                    print("Fitted rebuilt preprocessor on incoming features.")
+                except Exception as fit_exc:
+                    print(f"Warning: failed to fit rebuilt preprocessor on incoming features: {fit_exc}")
                 # Save rebuilt preprocessor so future loads succeed
                 try:
                     save_object(file_path=preprocessor_path, obj=preprocessor)

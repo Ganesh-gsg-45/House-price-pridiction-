@@ -20,12 +20,13 @@ class DataTransformation:
         self.data_transformation_config=DataTransformationconfig()
     def get_data_transformation_object(self):
         try:
-            df=pd.read_csv('C:\\Users\\T Ganesh\\OneDrive\\Desktop\\gsg\\housepridiction\\data\\data.csv')
-            df.drop(['date','street', 'city',
-             'statezip', 'country'],axis=1,inplace=True)
-            numerical_cols=['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors',
-            'waterfront', 'view', 'condition', 'sqft_above', 'sqft_basement',
-             'yr_built', 'yr_renovated']
+            # Build preprocessing object from known numerical feature list.
+            # Do NOT read local data file here — that path doesn't exist on deployment servers.
+            numerical_cols = [
+                'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors',
+                'waterfront', 'view', 'condition', 'sqft_above', 'sqft_basement',
+                'yr_built', 'yr_renovated'
+            ]
             num_pipeline=Pipeline(
                 steps=[
                     ('imputer',SimpleImputer(strategy='median')),

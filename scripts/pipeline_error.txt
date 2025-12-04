@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\scripts\run_pipeline_verbose.py", line 9, in main
+    runpy.run_path('pipeline.py', run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "pipeline.py", line 9, in <module>
+    from src.components.data_ingestion import DataIngestion
+ModuleNotFoundError: No module named 'src'
