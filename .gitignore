@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Packaged deploy artifacts
+deploy_artifacts/
+deploy_artifacts.zip

@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import traceback
 from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 from src.exception import CustomException
 
@@ -48,6 +49,8 @@ if submit:
 		st.success(f"Predicted Price: ${prediction[0]:,.2f}")
 	except CustomException as ce:
 		st.error(f"Prediction failed: {ce}")
+		st.text(traceback.format_exc())
 	except Exception as e:
 		st.error(f"An unexpected error occurred: {e}")
+		st.text(traceback.format_exc())
 
