@@ -1,0 +1,13 @@
+[ 2025-12-04 21:25:02,070 ] 12 root - INFO - ==================================================
+[ 2025-12-04 21:25:02,070 ] 13 root - INFO - STARTING PREDICTION PIPELINE
+[ 2025-12-04 21:25:02,070 ] 14 root - INFO - ==================================================
+[ 2025-12-04 21:25:02,070 ] 17 root - INFO - 
+Creating sample house data...
+[ 2025-12-04 21:25:02,095 ] 35 root - INFO - Input data:
+   bedrooms  bathrooms  sqft_living  ...  sqft_basement  yr_built  yr_renovated
+0         3        2.0         2000  ...            500      2000             0
+
+[1 rows x 12 columns]
+[ 2025-12-04 21:25:02,095 ] 38 root - INFO - 
+Loading model and making prediction...
+[ 2025-12-04 21:25:02,096 ] 51 root - ERROR - Error in prediction: Error occured in python script name [C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\src\pipeline\predict_pipeline.py] line number [15] error message[Error occured in python script name [C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\src\utils.py] line number [46] error message[[Errno 2] No such file or directory: 'artifacts\\model.pkl']]

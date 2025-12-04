@@ -1,0 +1,71 @@
+[ 2025-12-04 21:28:12,770 ] 161 numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+[ 2025-12-04 21:28:14,445 ] 17 root - INFO - ==================================================
+[ 2025-12-04 21:28:14,446 ] 18 root - INFO - STARTING ML PIPELINE
+[ 2025-12-04 21:28:14,446 ] 19 root - INFO - ==================================================
+[ 2025-12-04 21:28:14,446 ] 22 root - INFO - 
+>>> STEP 1: DATA INGESTION
+[ 2025-12-04 21:28:14,446 ] 17 root - INFO - entered the data ingestion  method or component
+[ 2025-12-04 21:28:14,463 ] 20 root - INFO - Dataset size: 4600 rows, 18 columns
+[ 2025-12-04 21:28:14,476 ] 25 root - INFO - Train test split initiated
+[ 2025-12-04 21:28:14,484 ] 29 root - INFO - Inmgestion of the data iss completed
+[ 2025-12-04 21:28:14,484 ] 25 root - INFO - Data ingestion completed
+[ 2025-12-04 21:28:14,485 ] 26 root - INFO - Train data: artifacts\train.csv
+[ 2025-12-04 21:28:14,485 ] 27 root - INFO - Test data: artifacts\test.csv
+[ 2025-12-04 21:28:14,485 ] 30 root - INFO - 
+>>> STEP 2: DATA TRANSFORMATION
+[ 2025-12-04 21:28:14,485 ] 45 root - INFO - Preprocessor already exists, loading cached object
+[ 2025-12-04 21:28:14,561 ] 53 root - INFO - Read train and test data completed
+[ 2025-12-04 21:28:14,564 ] 59 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-12-04 21:28:14,576 ] 72 root - INFO - Saved preprocessing object.
+[ 2025-12-04 21:28:14,578 ] 35 root - INFO - Data transformation completed
+[ 2025-12-04 21:28:14,578 ] 36 root - INFO - Train array shape: (800, 13)
+[ 2025-12-04 21:28:14,579 ] 37 root - INFO - Test array shape: (200, 13)
+[ 2025-12-04 21:28:14,579 ] 40 root - INFO - 
+>>> STEP 3: MODEL TRAINING
+[ 2025-12-04 21:28:14,579 ] 31 root - INFO - Split training and test input data
+[ 2025-12-04 21:28:14,579 ] 81 root - INFO - Starting selective model evaluation
+[ 2025-12-04 21:28:14,579 ] 91 root - INFO - Training Decision Tree
+[ 2025-12-04 21:28:18,682 ] 104 root - INFO - Decision Tree trained in 4.10 seconds with score: -0.013001269413498884
+[ 2025-12-04 21:28:18,682 ] 91 root - INFO - Training Random Forest
+[ 2025-12-04 21:28:23,145 ] 104 root - INFO - Random Forest trained in 4.46 seconds with score: -0.006733581838328062
+[ 2025-12-04 21:28:23,145 ] 91 root - INFO - Training Gradient Boosting
+[ 2025-12-04 21:28:24,281 ] 104 root - INFO - Gradient Boosting trained in 1.14 seconds with score: -0.0009362640133496747
+[ 2025-12-04 21:28:24,282 ] 91 root - INFO - Training XGBRegressor
+[ 2025-12-04 21:28:24,412 ] 50 root - ERROR - Error in pipeline: Error occured in python script name [C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\src\components\model_trainer.py] line number [97] error message[
+All the 30 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+30 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\core.py", line 729, in inner_f
+    return func(**kwargs)
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\sklearn.py", line 1247, in fit
+    self._Booster = train(
+                    ~~~~~^
+        params,
+        ^^^^^^^
+    ...<9 lines>...
+        callbacks=self.callbacks,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\core.py", line 729, in inner_f
+    return func(**kwargs)
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\training.py", line 184, in train
+    if cb_container.after_iteration(bst, i, dtrain, evals):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\callback.py", line 267, in after_iteration
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\callback.py", line 267, in <genexpr>
+    ret = any(c.after_iteration(model, epoch, self.history) for c in self.callbacks)
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\T Ganesh\anaconda3\Lib\site-packages\xgboost\callback.py", line 463, in after_iteration
+    raise ValueError(msg)
+ValueError: Must have at least 1 validation dataset for early stopping.
+]

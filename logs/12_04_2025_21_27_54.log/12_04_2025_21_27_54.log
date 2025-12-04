@@ -1,0 +1,21 @@
+[ 2025-12-04 21:27:55,236 ] 161 numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+[ 2025-12-04 21:27:56,870 ] 17 root - INFO - ==================================================
+[ 2025-12-04 21:27:56,870 ] 18 root - INFO - STARTING ML PIPELINE
+[ 2025-12-04 21:27:56,870 ] 19 root - INFO - ==================================================
+[ 2025-12-04 21:27:56,870 ] 22 root - INFO - 
+>>> STEP 1: DATA INGESTION
+[ 2025-12-04 21:27:56,870 ] 17 root - INFO - entered the data ingestion  method or component
+[ 2025-12-04 21:27:56,888 ] 20 root - INFO - Dataset size: 4600 rows, 18 columns
+[ 2025-12-04 21:27:56,901 ] 25 root - INFO - Train test split initiated
+[ 2025-12-04 21:27:56,910 ] 29 root - INFO - Inmgestion of the data iss completed
+[ 2025-12-04 21:27:56,910 ] 25 root - INFO - Data ingestion completed
+[ 2025-12-04 21:27:56,910 ] 26 root - INFO - Train data: artifacts\train.csv
+[ 2025-12-04 21:27:56,910 ] 27 root - INFO - Test data: artifacts\test.csv
+[ 2025-12-04 21:27:56,910 ] 30 root - INFO - 
+>>> STEP 2: DATA TRANSFORMATION
+[ 2025-12-04 21:27:56,910 ] 49 root - INFO - Obtaining preprocessing object
+[ 2025-12-04 21:27:56,928 ] 35 root - INFO - Numerical columns: ['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront', 'view', 'condition', 'sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated']
+[ 2025-12-04 21:27:56,983 ] 53 root - INFO - Read train and test data completed
+[ 2025-12-04 21:27:56,985 ] 59 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-12-04 21:27:57,012 ] 72 root - INFO - Saved preprocessing object.
+[ 2025-12-04 21:27:57,013 ] 50 root - ERROR - Error in pipeline: Error occured in python script name [C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\src\components\data_transformation.py] line number [80] error message['DataTransformationconfig' object has no attribute 'preprocessor_obj_file_path']

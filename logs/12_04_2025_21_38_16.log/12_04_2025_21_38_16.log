@@ -1,0 +1,19 @@
+[ 2025-12-04 21:38:18,573 ] 12 root - INFO - ==================================================
+[ 2025-12-04 21:38:18,573 ] 13 root - INFO - STARTING PREDICTION PIPELINE
+[ 2025-12-04 21:38:18,574 ] 14 root - INFO - ==================================================
+[ 2025-12-04 21:38:18,574 ] 17 root - INFO - 
+Creating sample house data...
+[ 2025-12-04 21:38:18,594 ] 35 root - INFO - Input data:
+   bedrooms  bathrooms  sqft_living  ...  sqft_basement  yr_built  yr_renovated
+0         3        2.0         2000  ...            500      2000             0
+
+[1 rows x 12 columns]
+[ 2025-12-04 21:38:18,599 ] 38 root - INFO - 
+Loading model and making prediction...
+[ 2025-12-04 21:38:18,830 ] 42 root - INFO - 
+==================================================
+[ 2025-12-04 21:38:18,830 ] 43 root - INFO - PREDICTION RESULT
+[ 2025-12-04 21:38:18,830 ] 44 root - INFO - ==================================================
+[ 2025-12-04 21:38:18,830 ] 45 root - INFO - Predicted House Price: $466,039.70
+[ 2025-12-04 21:38:18,830 ] 46 root - INFO - ==================================================
+

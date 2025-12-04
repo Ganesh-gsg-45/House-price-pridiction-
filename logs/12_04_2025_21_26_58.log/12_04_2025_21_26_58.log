@@ -1,0 +1,20 @@
+[ 2025-12-04 21:26:59,391 ] 161 numexpr.utils - INFO - NumExpr defaulting to 12 threads.
+[ 2025-12-04 21:27:01,535 ] 17 root - INFO - ==================================================
+[ 2025-12-04 21:27:01,536 ] 18 root - INFO - STARTING ML PIPELINE
+[ 2025-12-04 21:27:01,536 ] 19 root - INFO - ==================================================
+[ 2025-12-04 21:27:01,536 ] 22 root - INFO - 
+>>> STEP 1: DATA INGESTION
+[ 2025-12-04 21:27:01,537 ] 17 root - INFO - entered the data ingestion  method or component
+[ 2025-12-04 21:27:01,576 ] 20 root - INFO - Dataset size: 4600 rows, 18 columns
+[ 2025-12-04 21:27:01,591 ] 25 root - INFO - Train test split initiated
+[ 2025-12-04 21:27:01,601 ] 29 root - INFO - Inmgestion of the data iss completed
+[ 2025-12-04 21:27:01,601 ] 25 root - INFO - Data ingestion completed
+[ 2025-12-04 21:27:01,601 ] 26 root - INFO - Train data: artifacts\train.csv
+[ 2025-12-04 21:27:01,601 ] 27 root - INFO - Test data: artifacts\test.csv
+[ 2025-12-04 21:27:01,601 ] 30 root - INFO - 
+>>> STEP 2: DATA TRANSFORMATION
+[ 2025-12-04 21:27:01,601 ] 49 root - INFO - Obtaining preprocessing object
+[ 2025-12-04 21:27:01,618 ] 35 root - INFO - Numerical columns: ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront', 'view', 'condition', 'sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated']
+[ 2025-12-04 21:27:01,677 ] 53 root - INFO - Read train and test data completed
+[ 2025-12-04 21:27:01,679 ] 59 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-12-04 21:27:01,680 ] 50 root - ERROR - Error in pipeline: Error occured in python script name [C:\Users\T Ganesh\OneDrive\Desktop\gsg\housepridiction\src\components\data_transformation.py] line number [64] error message[A given column is not a column of the dataframe]
